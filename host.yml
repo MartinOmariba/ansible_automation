@@ -1,0 +1,27 @@
+---
+datacenter:
+  children:
+    router:
+      hosts:
+        192.168.122.204:
+      vars:
+        testvar: 999
+
+    switch:
+      hosts:
+        192.168.122.201:
+
+
+  vars:
+    ansible_connection: network_cli
+    ansible_network_os: ios
+    ansible_user: cisco
+    ansible_become_password: cisco
+    ansible_ssh_pass: cisco
+    ntp_servers:
+      -192.168.122.201
+      -192.168.122.204
+
+
+# : means works on that area, its a group - means multiple values
+# ansible_become_password: cisco is used here while to navigate to enable

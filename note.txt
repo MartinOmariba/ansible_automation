@@ -1,0 +1,20 @@
+#installations
+apt-get update
+apt-gate upgrade
+
+apt-get install python3-pip
+
+pip install ansible
+pip install netmiko
+pip install --upgrade ansible
+ansible --version
+
+
+
+#to ssh to a device
+ssh -l cisco [target-ip]
+
+#.ini file is old version 
+#.yml is new version of creating hosts
+
+#become allows as to navigate to enable mode
